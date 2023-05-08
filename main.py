@@ -35,11 +35,11 @@ model.compile(
     optimizer="rmsprop", loss="sparse_categorical_crossentropy", metrics=["accuracy"]
 )
 
-history = model.fit(train_images, train_labels, epochs=5, batch_size=64)
+history = model.fit(train_images, train_labels, epochs=10, batch_size=64)
 
 # Evaluate the model
 test_loss, test_acc = model.evaluate(test_images, test_labels)
-print("Test loss: ", test_loss)
+print("Test acc: ", test_acc)
 
 # Model Summary
 # model.summary()
